@@ -13,5 +13,6 @@ def create_app():
     migrate.init_app(app, db)
 
     app.add_url_rule("/", view_func=views.index_page)
-
+    
     return app
+

@@ -14,5 +14,6 @@ def create_app():
 
     app.add_url_rule("/", view_func=views.index_page)
     
+    app.add_url_rule("/make_tz/", view_func=views.make_tz)
     return app
 

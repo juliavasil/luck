@@ -1,7 +1,21 @@
-from flask import render_template, url_for
-
+from flask import render_template, request, redirect, session, url_for 
+ 
 
 def index_page():
     return render_template("index.html")
 
+def make_tz():
+    
+    return render_template("make_tz.html")
 
+def login_page():
+    username = ""
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        # Учебный пример проверки логина и пароля
+        # В реальных приложениях проверка выполняется с помощью KDF-функций
+        if username == "admin" and password == "pass":
+            session["username"] = username
+            return redirect(url_for("index_page"))
+    return render_template("login.html", username=username)

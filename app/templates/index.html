@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 
-{% block link %}
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-{% endblock %}
-
 {% block content %}
-<div class="v10_6">
-    <div class="v11_9">
+<div class="container"></div>
+    <div class="v10_6">
+        <div class="v11_9">
 
-    </div>
-    <div class="v11_11">
+        </div>
+        <div class="v11_11">
 
+        </div>
+        <span class="v13_4">Конструктор технических заданий по ГОСТ 19</span>
+        <div class="v13_5"></div>
+        <a  href="{{ url_for('make_tz') }}"  class="v13_6" 
+        >Составить ТЗ</a>
+        <div class="v13_8"></div>
     </div>
-    <span class="v13_4">Конструктор технических заданий по ГОСТ 19</span>
-    <div class="v13_5"></div>
-    <span class="v13_6" href="maketz.html">Составить ТЗ</span>
-    <div class="v13_8"></div>
 </div>
 {% endblock %}
